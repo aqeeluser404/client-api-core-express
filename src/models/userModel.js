@@ -74,7 +74,8 @@ const userSchema = new Schema({
 
 }, {
   collection: 'User',
-  timestamps: true
+  timestamps: true,
+  versionKey: false
 });
 
 // ─── UserSchema Functions ─────────────────────────────────────────────
