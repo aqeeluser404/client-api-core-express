@@ -1,8 +1,9 @@
-
 // ─── Dependencies ─────────────────────────────────────────────
 
-import app from './app.js';
-import { connect } from './config/db.js';
+import 'dotenv/config';
+
+const { default: app } = await import('./app.js');
+const { connect } = await import('./config/db.js');
 
 // ─── Environment Variables ─────────────────────────────────────────────
 

@@ -1,9 +1,6 @@
 
 // ─── Dependencies ─────────────────────────────────────────────
 
-import dotenv from 'dotenv';
-dotenv.config();
-
 import express from 'express';
 import compression from 'compression';
 import cookieParser from 'cookie-parser';
