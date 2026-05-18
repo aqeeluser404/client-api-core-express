@@ -43,12 +43,14 @@ initCrons()
 
 const routes = [ systemRoutes, authRoutes, userRoutes, adminUserRoutes ]
 
-app.get("/api/v1/health", (req, res) => {
+app.get("/", (req, res) => {
   res.status(200).send("OK");
 });
-
+app.get("/health", (req, res) => {
+  res.status(200).send("OK");
+});
 routes.forEach(({ prefix, router }) => {
-  app.use(`${API_VERSION}${prefix}`, router);  // e.g. /v1/system
+  app.use(`${API_VERSION}${prefix}`, router);  // e.g. /api/v1/profile
 });
 
 // ─── Error Handler ─────────────────────────────────────────────
